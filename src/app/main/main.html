@@ -1,0 +1,43 @@
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">Request</a>
+    </div>
+<div class="navbar-collapse collapse">
+    <form class="navbar-form navbar-right" role="form">
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="Enter your name" ng-model="nameText">
+        </div>
+    </form>
+</div>
+</div>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <h3>Dear customer!</h3>
+        <p ng-bind-html="someHTML"></p>
+        <p>
+        <div ng-repeat="item in someArray">
+        <img ng-src="/image/empty.png" style="width: 30px; height: 30px;">
+        <span>{{item.name}}</span>
+        <span>{{item.value}}</span>
+        <span class="disable-item" style="color:{{['red','green'][+item.isDoc]}};" ng-click="SelectDoc(item)">{{['(no document)','(have a document)'][+item.isDoc]}}</span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 ng-bind="formTitle"></h2>
+            <p ng-if="formText" ng-bind="formText"></p>
+            <p ng-if="formText && nameText" ng-bind="'Regards, ' + nameText"></p>
+            <p ng-if="formText && !nameText" ng-bind="'Enter your name in item!!!'"></p>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <p>© 2016</p>
+    </footer>
+</div>
