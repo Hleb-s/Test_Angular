@@ -19,10 +19,10 @@
         <p ng-bind-html="someHTML"></p>
         <p>
         <div ng-repeat="item in someArray">
-        <img ng-src="/image/empty.png" style="width: 30px; height: 30px;">
-        <span>{{item.name}}</span>
-        <span>{{item.value}}</span>
-        <span class="disable-item" style="color:{{['red','green'][+item.isDoc]}};" ng-click="SelectDoc(item)">{{['(no document)','(have a document)'][+item.isDoc]}}</span>
+            <img ng-src="/image/empty.png" style="width: 30px; height: 30px;">
+            <span>{{item.name}}</span>
+            <span>{{item.value}}</span>
+            <span class="disable-item" style="color:{{['red','green'][+item.isDoc]}};" ng-click="SelectDoc(item)">{{['(no document)','(have a document)'][+item.isDoc]}}</span>
         </div>
     </div>
 </div>
